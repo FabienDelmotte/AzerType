@@ -37,10 +37,30 @@ Le tableau listeMots contient 3 mots : “Cachalot”, “Pétunia” et “Serv
 - compter un point par mot correctement tapé ;
 - afficher le score à la fin avec un console.log.
 
-#### Étape 2 : proposez deux types de listes de mots
+#### Étape 2 : proposer deux types de listes de mots
 
 Pour rendre le jeu plus engageant, nous voulons que l’utilisateur puisse avoir le choix entre deux listes de mots différentes : une liste avec des mots et une liste avec des phrases.
 
 - Déclarer un tableau listePhrases qui contient 3 courtes phrases : “Pas de panique !”, “La vie, l’univers et le reste”, “Merci pour le poisson”.
 - Demander à l’utilisateur s’il veut la liste de mots ou la liste de phrases. Répéter la question tant que l’utilisateur n’a pas écrit “mots” ou “phrases”.
 - Lancer la boucle for, avec la liste que l’utilisateur a choisie.
+
+### Organisez votre code grâce aux fonctions
+
+#### Étape 1 : découper le code en fonctions
+
+Créer les fonctions suivantes :
+
+- afficherResultat : cette fonction prend en paramètre le résultat et le nombre total de mots proposés, et affiche le résultat du joueur ;
+- choisirPhrasesOuMots : cette fonction demande à l’utilisateur s’il veut jouer avec des phrases ou des mots ;
+- lancerBoucleDeJeu : cette fonction contient la boucle principale de jeu, c'est-à-dire la boucle for qui propose les mots/phrases au joueur, et lui demande de taper ces mots ; Elle prend en paramètre le tableau de mots/phrases qui sera proposé au joueur, et retourne le nombre de mots/phrases correctement tapés ;
+- lancerJeu : cette fonction sera la fonction principale, c’est elle qui s’occupe de lancer toutes les autres ; En d’autres termes, c’est elle qui va appeler les fonctions qui viennent d'être écrites.
+
+#### Étape 2 : séparez votre code en plusieurs fichiers
+
+- Séparer le code en plusieurs fichiers.
+- Créer un fichier config.js qui contiendra uniquement les deux listes de propositions.
+- Créer un fichier main.js qui contiendra uniquement l’appel à la fonction principale lancerJeu.
+- Vérifier que tout fonctionne encore.
+- Créer un nouveau répertoire appelé “scripts”, et y placer tous les fichiers.
+- Vérifier à nouveau le code.
