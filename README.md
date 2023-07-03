@@ -64,3 +64,18 @@ Créer les fonctions suivantes :
 - Vérifier que tout fonctionne encore.
 - Créer un nouveau répertoire appelé “scripts”, et y placer tous les fichiers.
 - Vérifier à nouveau le code.
+
+## Faites interagir JavaScript avec une page web
+
+### Récupérez un élément d’une page web
+
+Dans le fichier main.js :
+
+- Sélectionner avec la méthode getElementById :
+  - l’input dans lequel le joueur va écrire son texte ;
+  - le bouton de validation.
+- Sélectionner avec la méthode querySelector :
+  - l’endroit où le mot proposé sera affiché ;
+  - l’endroit où le score sera affiché.
+- Sélectionner avec la méthode querySelectorAll :
+  - les boutons radio de choix.
