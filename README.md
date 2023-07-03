@@ -79,3 +79,7 @@ Dans le fichier main.js :
   - l’endroit où le score sera affiché.
 - Sélectionner avec la méthode querySelectorAll :
   - les boutons radio de choix.
+
+### Créez un nouvel élément dans une page web
+
+Modifier la fonction afficherResultat. Cette fonction ne devra plus afficher le résultat en console, mais directement sur la page HTML sous la forme “score / nbMotsProposes”.
