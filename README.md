@@ -26,3 +26,21 @@ Faire une seconde structure conditionnelle pour vérifier si le second mot tapé
 #### Étape 3 : Tester le troisième mot
 
 Recommencer une troisième fois pour la dernière case du tableau !
+
+### Répétez du code grâce aux boucles
+
+#### Étape 1 : répéter le code avec une boucle
+
+Le tableau listeMots contient 3 mots : “Cachalot”, “Pétunia” et “Serviette”. Pour chacun de ces mots, à l’aide d’une boucle for :
+
+- demander à l’utilisateur de le retaper avec prompt ;
+- compter un point par mot correctement tapé ;
+- afficher le score à la fin avec un console.log.
+
+#### Étape 2 : proposez deux types de listes de mots
+
+Pour rendre le jeu plus engageant, nous voulons que l’utilisateur puisse avoir le choix entre deux listes de mots différentes : une liste avec des mots et une liste avec des phrases.
+
+- Déclarer un tableau listePhrases qui contient 3 courtes phrases : “Pas de panique !”, “La vie, l’univers et le reste”, “Merci pour le poisson”.
+- Demander à l’utilisateur s’il veut la liste de mots ou la liste de phrases. Répéter la question tant que l’utilisateur n’a pas écrit “mots” ou “phrases”.
+- Lancer la boucle for, avec la liste que l’utilisateur a choisie.

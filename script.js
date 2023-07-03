@@ -1,20 +1,35 @@
 const listeMots = ["Cachalot", "Pétunia", "Serviette"];
+const listePhrases = [
+  "Pas de panique !",
+  "La vie, l'univers et le reste",
+  "Merci pour le poisson",
+];
+
 let score = 0;
 
-let motUtilisateur = prompt("Entrez le mot : " + listeMots[0]);
-if (motUtilisateur === listeMots[0]) {
-  score++;
-  console.log(score);
+let choix = prompt(
+  "Avec quelle liste désirez-vous jouer : 'mots' ou 'phrases' ?"
+);
+while (choix !== "mots" && choix !== "phrases") {
+  choix = prompt(
+    "Avec quelle liste désirez-vous jouer : 'mots' ou 'phrases' ?"
+  );
 }
 
-motUtilisateur = prompt("Entrez le mot : " + listeMots[1]);
-if (motUtilisateur === listeMots[1]) {
-  score++;
+if (choix === "mots") {
+  for (let i = 0; i < listeMots.length; i++) {
+    let motUtilisateur = prompt("Entrez le mot : " + listeMots[i]);
+    if (motUtilisateur === listeMots[i]) {
+      score++;
+    }
+  }
+  console.log("Votre score est de " + score + " sur " + listeMots.length);
+} else {
+  for (let i = 0; i < listePhrases.length; i++) {
+    let phraseUtilisateur = prompt("Entrez la phrase : " + listePhrases[i]);
+    if (phraseUtilisateur === listePhrases[i]) {
+      score++;
+    }
+  }
+  console.log("Votre score est de " + score + " sur " + listePhrases.length);
 }
-
-motUtilisateur = prompt("Entrez le mot : " + listeMots[2]);
-if (motUtilisateur === listeMots[2]) {
-  score++;
-}
-
-console.log("Votre score est de " + score + " sur 3");
