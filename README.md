@@ -162,3 +162,26 @@ Il faut :
 - Écrire une fonction validerEmail qui va prendre en paramètre l’e-mail à tester et retourner true si l’e-mail est valide, false sinon.
 - Utiliser ces deux fonctions avec l’événement submit du formulaire.
 - Si les deux champs sont valides, afficher l’e-mail. Sinon, afficher seulement un message d’erreur dans la console.
+
+### Affichez un message d’erreur
+
+#### Étape 1 : scindez la fonction lancerJeu
+
+La fonction lancerJeu devient un petit peu trop grande, d’autant plus si nous voulons en plus ajouter de la gestion d’erreur. La première étape consiste donc à alléger la fonction, en déportant le traitement du formulaire :
+
+- Créer une fonction gererFormulaire. Cette fonction va prendre en paramètre le score à envoyer, et s’occuper de gérer le formulaire.
+- Utiliser cette fonction dans lancerJeu.
+
+#### Étape 2 : affichez les erreurs
+
+- Modifier les fonctions validerNom et validerEmail : elles ne vont plus retourner true ou false, mais se contenter de lancer une exception en cas d’erreur, avec un message expliquant le problème.
+
+Par exemple “Le nom est trop court” ou “L’e-mail n’est pas valide”.
+
+- Modifier la méthode gererFormulaire pour ajouter un try catch qui affiche “erreur” dans la console.
+- Créer une nouvelle fonction afficherMessageErreur qui prendra en paramètre le message d’erreur à afficher. Pour afficher ce message, ajouter en JavaScript un span à la fin de la div .popup.
+
+Attention, si on clique plusieurs fois sur le bouton, il ne faut pas que le message d’erreur apparaisse plusieurs fois !
+
+- Dans le bloc catch, appeler la fonction afficherMessageErreur pour afficher l’erreur.
+- Dans le bloc try, appeler cette fonction pour qu’elle efface le message d’erreur.
