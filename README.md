@@ -142,3 +142,12 @@ Il nous reste une dernière étape : gérer le score de l’utilisateur.
   - utiliser cette nouvelle variable pour le traitement à la place de listeMots ;
   - lorsque le joueur clique sur Phrases, modifier la valeur de listeProposition pour qu’elle corresponde au tableau des phrases. Quand le joueur clique sur Mots, faire de même ;
   - mettre à jour l’affichage.
+
+### Soumettez votre formulaire
+
+Il faut :
+
+- écouter l’événement submit sur ce nouveau formulaire, et empêcher le comportement par défaut de se produire ;
+- récupérer les valeurs des champs présents ;
+- créer une variable sujet et une variable message, et les afficher dans la console ;
+- utiliser la méthode afficherEmail préparée, avec les bons arguments pour afficher l’e-mail à envoyer, prérempli avec les bonnes informations.
