@@ -151,3 +151,14 @@ Il faut :
 - récupérer les valeurs des champs présents ;
 - créer une variable sujet et une variable message, et les afficher dans la console ;
 - utiliser la méthode afficherEmail préparée, avec les bons arguments pour afficher l’e-mail à envoyer, prérempli avec les bonnes informations.
+
+### Mettez en place des règles de validation
+
+Il faut :
+
+- Écrire une fonction validerNom qui va prendre le nom à tester en paramètre et retourner true si le nom est valide, false sinon.
+  - La fonction doit prendre le nom en paramètre et valider qu’il est correct.
+  - La règle est d’avoir un champ avec au moins deux caractères.
+- Écrire une fonction validerEmail qui va prendre en paramètre l’e-mail à tester et retourner true si l’e-mail est valide, false sinon.
+- Utiliser ces deux fonctions avec l’événement submit du formulaire.
+- Si les deux champs sont valides, afficher l’e-mail. Sinon, afficher seulement un message d’erreur dans la console.
