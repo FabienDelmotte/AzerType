@@ -83,3 +83,51 @@ Dans le fichier main.js :
 ### Créez un nouvel élément dans une page web
 
 Modifier la fonction afficherResultat. Cette fonction ne devra plus afficher le résultat en console, mais directement sur la page HTML sous la forme “score / nbMotsProposes”.
+
+### Interagissez avec un élément d’une page web grâce aux événements
+
+#### Étape 1 : nettoyer le projet
+
+Supprimer les éléments qui seront modifiés dans notre projet :
+
+- mettre en commentaire toutes les méthodes qui utilisent prompt ;
+- mettre à jour la fonction lancerJeu pour qu’elle ne fasse plus appel à ces fonctions.
+
+Désactiver temporairement le choix entre la liste des phrases et la liste des mots, de manière à utiliser systématiquement la liste des mots :
+
+- mettre à jour la fonction lancerJeu, et commenter ce qui concerne la variable listePhrases.
+
+#### Étape 2 : gérer le clic sur le bouton “Valider”
+
+À ce stade, le projet n’est plus fonctionnel, il n’est plus possible de jouer. Il faut donc reconstruire ce qui a été commenté à la première étape, en interagissant directement avec la page HTML.
+La première étape est de pouvoir réagir au clic sur le bouton “Envoyer” :
+
+- Dans la fonction lancerJeu, récupérer le bouton de validation et écouter l’événement click en utilisant la méthode addEventListener.
+- Tester que cela fonctionne avec un console.log(“j’ai cliqué !”).
+- Récupérer la balise inputEcriture et la placer dans une variable.
+- Dans l’addEventListener, faire un console.log avec la valeur contenue dans cette balise.
+
+Pour accéder à la valeur contenue dans la balise inputEcriture, utiliser la propriété value.
+
+- Tester en écrivant quelque chose dans le champ, et en vérifiant que la valeur apparaît bien lorsqu'on clique sur Envoyer.
+
+#### Étape 3 : afficher les mots que l’utilisateur doit recopier
+
+À ce stade, on sait comment récupérer le mot que l’utilisateur a écrit, mais on n’affiche pas encore le mot qu’il devra recopier. Pour réaliser cette mise à jour du code HTML :
+
+- à l’extérieur du addEventListener, créer une variable i qui servira de compteur. Dans l’addEventListener, ajouter 1 à i à chaque fois que l’utilisateur clique sur le bouton Envoyer ;
+- ajouter un console.log qui va afficher le mot numéro i du tableau listeMots ;
+- créer une fonction afficherProposition, qui va prendre en paramètre le mot à afficher, et afficher ce mot dans la div zoneProposition ;
+- utiliser cette fonction pour afficher les mots à proposer.
+
+Après ces opérations, on doit voir apparaître les mots un par un après avoir réalisé ces opérations. Cependant, on remarquera peut-être que le mot “undefined” s’affiche lorsqu’il n’y a plus de mots disponibles dans le tableau. Pour régler ce problème :
+
+- ajouter un test dans l’addEventListener. Si le mot numéro i du tableau vaut undefined, écrire le message “Le jeu est fini” à la place du mot, et désactiver le bouton de validation. Pour désactiver ce bouton, mettre la propriété disabled de ce bouton à true ;
+- à chaque fois que l’utilisateur clique sur Valider, vider le champ inputEcriture.
+
+#### Étape 4 : gérer le score
+
+Il nous reste une dernière étape : gérer le score de l’utilisateur.
+
+- Dans l’addEventListener, comparer ce qu’a écrit l’utilisateur et le mot proposé. Si ces deux mots sont identiques, augmenter le score.
+- Dans tous les cas, mettre à jour le score en appelant la fonction de mise à jour du score avec les bons paramètres.

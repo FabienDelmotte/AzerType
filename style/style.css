@@ -8,8 +8,8 @@
 }
 
 /**
- * Eléments génériques
- */
+* Eléments génériques
+*/
 
 body {
   --color-primary: #f76c5e;
@@ -87,8 +87,8 @@ button:focus {
 }
 
 /**
- * Eléments principaux
- */
+* Eléments principaux
+*/
 body {
   display: flex;
   flex-direction: column;
@@ -135,8 +135,8 @@ footer {
 }
 
 /**
- * Mise en forme des éléments de la zone principale
- */
+* Mise en forme des éléments de la zone principale
+*/
 
 /* Zone d'options */
 .optionSource {
@@ -184,8 +184,8 @@ footer {
 }
 
 /** 
- * Responsive
- */
+* Responsive
+*/
 
 /* En dessous de 1200 px */
 @media screen and (max-width: 1200px) {
