@@ -131,3 +131,14 @@ Il nous reste une dernière étape : gérer le score de l’utilisateur.
 
 - Dans l’addEventListener, comparer ce qu’a écrit l’utilisateur et le mot proposé. Si ces deux mots sont identiques, augmenter le score.
 - Dans tous les cas, mettre à jour le score en appelant la fonction de mise à jour du score avec les bons paramètres.
+
+## Créez un formulaire de saisie de données
+
+### Récupérez la valeur d’un champ de formulaire
+
+- Écouter l’événement “change” sur les boutons radio.
+- Lorsque cet événement se déclenche, modifier le texte proposé pour le remplacer par une phrase si l’utilisateur a cliqué sur “Phrases”, ou un mot si l’utilisateur a cliqué sur “Mots”. Pour cela :
+  - déclarer une nouvelle variable listeProposition initialisée par défaut à listeMots ;
+  - utiliser cette nouvelle variable pour le traitement à la place de listeMots ;
+  - lorsque le joueur clique sur Phrases, modifier la valeur de listeProposition pour qu’elle corresponde au tableau des phrases. Quand le joueur clique sur Mots, faire de même ;
+  - mettre à jour l’affichage.
